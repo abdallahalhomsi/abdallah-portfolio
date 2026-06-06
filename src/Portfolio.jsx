@@ -268,7 +268,7 @@ export default function Portfolio() {
       {/* WORK */}
       <section id="work" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionLabel n="01" title="Selected Work" />
-        <div className="mt-10 md:mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
           {PROJECTS.map((p, i) => (
             <Reveal key={p.name} delay={(i % 2) * 0.1}>
               <article className="group relative h-full overflow-hidden rounded-3xl glass neon-border p-8 transition-all duration-500 hover:-translate-y-1.5"
@@ -277,11 +277,11 @@ export default function Portfolio() {
                 <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full blur-3xl opacity-50 transition-opacity group-hover:opacity-80"
                      style={{ background: `radial-gradient(circle,${p.c1},transparent 70%)` }} />
                 <div className="relative flex items-start justify-between gap-4">
-                  <div>
+                  <div className="min-w-0">
                     <div className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">{p.type}</div>
-                    <h3 className="mt-2 font-display font-bold text-3xl">{p.name}</h3>
+                    <h3 className="mt-2 font-display font-bold text-2xl md:text-3xl">{p.name}</h3>
                   </div>
-                  <span className="font-mono text-[11px] text-neutral-500 whitespace-nowrap">{p.period}</span>
+                  <span className="shrink-0 font-mono text-[11px] text-neutral-500 whitespace-nowrap">{p.period}</span>
                 </div>
                 <p className="relative mt-5 text-sm leading-relaxed text-neutral-300 font-body">{p.blurb}</p>
                 <div className="relative mt-6 flex flex-wrap gap-2">
@@ -328,7 +328,7 @@ export default function Portfolio() {
       {/* SKILLS */}
       <section id="skills" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionLabel n="03" title="Toolkit" />
-        <div className="mt-10 md:mt-16 grid gap-px overflow-hidden rounded-3xl glass neon-border md:grid-cols-2">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-3xl glass neon-border md:grid-cols-2">
           {Object.entries(SKILLS).map(([group, items], i) => (
             <Reveal key={group} delay={i * 0.06}>
               <div className="h-full p-8">
@@ -378,7 +378,7 @@ export default function Portfolio() {
           <h2 className="mt-6 font-display font-extrabold text-[13vw] leading-[0.9] uppercase md:text-[7.5rem]">
             Get in <span className="grad-text">touch</span>
           </h2>
-          <div className="mt-12 grid gap-px overflow-hidden rounded-3xl glass neon-border md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-3xl glass neon-border md:grid-cols-3">
             <a href={`mailto:${PROFILE.email}`} className="group p-8 hover:bg-white/5 transition">
               <div className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">Email</div>
               <div className="mt-2 text-sm text-neutral-300 group-hover:text-cyan-300 transition break-all">{PROFILE.email}</div>
@@ -410,7 +410,7 @@ function SectionLabel({ n, title }) {
     <Reveal>
       <div className="flex items-baseline gap-4 md:gap-6">
         <span className="font-mono text-sm text-cyan-300/60">{n}</span>
-        <h2 className="font-display font-extrabold text-3xl sm:text-4xl uppercase md:text-6xl">{title}</h2>
+        <h2 className="font-display font-extrabold uppercase text-[clamp(1.5rem,6.5vw,3.75rem)]">{title}</h2>
         <div className="h-px flex-1" style={{ background: "linear-gradient(90deg,rgba(34,211,238,.4),transparent)" }} />
       </div>
     </Reveal>
