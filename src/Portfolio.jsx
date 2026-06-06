@@ -222,7 +222,7 @@ export default function Portfolio() {
       </nav>
 
       {/* HERO */}
-      <header id="top" className="relative z-10 mx-auto max-w-6xl px-6 pt-40 pb-24 md:pt-52 md:pb-36">
+      <header id="top" className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-16 md:pt-52 md:pb-36">
         <div className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300/80 mb-8"
              style={{ transform: `translateY(${scrollY * 0.05}px)` }}>
           <span className="inline-block h-2 w-2 rounded-full bg-cyan-400 mr-2 align-middle" style={{ boxShadow: "0 0 12px #22d3ee" }} />
@@ -240,11 +240,11 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl glass neon-border md:grid-cols-4">
+        <div className="mt-12 md:mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl glass neon-border md:grid-cols-4">
           {STATS.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08}>
-              <div className="px-6 py-8">
-                <div className="font-display font-bold text-3xl grad-text">{s.value}</div>
+              <div className="px-5 py-6 md:px-6 md:py-8">
+                <div className="font-display font-bold text-2xl md:text-3xl grad-text">{s.value}</div>
                 <div className="mt-1 font-mono text-[11px] uppercase tracking-wider text-neutral-500">{s.label}</div>
               </div>
             </Reveal>
@@ -266,9 +266,9 @@ export default function Portfolio() {
       </div>
 
       {/* WORK */}
-      <section id="work" className="relative z-10 mx-auto max-w-6xl px-6 py-28">
+      <section id="work" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionLabel n="01" title="Selected Work" />
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 md:mt-16 grid gap-6 md:grid-cols-2">
           {PROJECTS.map((p, i) => (
             <Reveal key={p.name} delay={(i % 2) * 0.1}>
               <article className="group relative h-full overflow-hidden rounded-3xl glass neon-border p-8 transition-all duration-500 hover:-translate-y-1.5"
@@ -304,10 +304,10 @@ export default function Portfolio() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="relative z-10 mx-auto max-w-6xl px-6 py-28">
+      <section id="experience" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionLabel n="02" title="Experience" />
         <Reveal>
-          <div className="mt-16 rounded-3xl glass neon-border p-10 md:p-14">
+          <div className="mt-10 md:mt-16 rounded-3xl glass neon-border p-7 md:p-14">
             <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
               <h3 className="font-display font-bold text-3xl md:text-4xl">{EXPERIENCE.title}</h3>
               <span className="font-mono text-xs text-neutral-500">{EXPERIENCE.period}</span>
@@ -326,9 +326,9 @@ export default function Portfolio() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="relative z-10 mx-auto max-w-6xl px-6 py-28">
+      <section id="skills" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionLabel n="03" title="Toolkit" />
-        <div className="mt-16 grid gap-px overflow-hidden rounded-3xl glass neon-border md:grid-cols-2">
+        <div className="mt-10 md:mt-16 grid gap-px overflow-hidden rounded-3xl glass neon-border md:grid-cols-2">
           {Object.entries(SKILLS).map(([group, items], i) => (
             <Reveal key={group} delay={i * 0.06}>
               <div className="h-full p-8">
@@ -345,12 +345,12 @@ export default function Portfolio() {
       </section>
 
       {/* CERTIFICATES */}
-      <section id="certificates" className="relative z-10 mx-auto max-w-6xl px-6 py-28">
+      <section id="certificates" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-28">
         <SectionLabel n="04" title="Certificates" />
         <p className="mt-6 max-w-2xl text-neutral-400 font-body">
           Sabancı University — BSc Computer Science & Engineering, Minor in Business Analytics. Dean's List High Honors, 50% merit scholarship. Plus a focused stack of Anthropic AI engineering certificates.
         </p>
-        <div className="mt-16 space-y-5">
+        <div className="mt-10 md:mt-16 space-y-5">
           {CERT_TRACKS.map((tr, i) => (
             <Reveal key={tr.track} delay={i * 0.08}>
               <div className="rounded-3xl glass neon-border p-8 md:p-10">
@@ -372,7 +372,7 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative z-10 mx-auto max-w-6xl px-6 py-28 md:py-40">
+      <section id="contact" className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-40">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300/80">Let's build something</p>
           <h2 className="mt-6 font-display font-extrabold text-[13vw] leading-[0.9] uppercase md:text-[7.5rem]">
@@ -408,9 +408,9 @@ export default function Portfolio() {
 function SectionLabel({ n, title }) {
   return (
     <Reveal>
-      <div className="flex items-baseline gap-6">
+      <div className="flex items-baseline gap-4 md:gap-6">
         <span className="font-mono text-sm text-cyan-300/60">{n}</span>
-        <h2 className="font-display font-extrabold text-4xl uppercase md:text-6xl">{title}</h2>
+        <h2 className="font-display font-extrabold text-3xl sm:text-4xl uppercase md:text-6xl">{title}</h2>
         <div className="h-px flex-1" style={{ background: "linear-gradient(90deg,rgba(34,211,238,.4),transparent)" }} />
       </div>
     </Reveal>
