@@ -228,7 +228,7 @@ export default function Portfolio() {
           <span className="inline-block h-2 w-2 rounded-full bg-cyan-400 mr-2 align-middle" style={{ boxShadow: "0 0 12px #22d3ee" }} />
           {PROFILE.location} · Available 2027
         </div>
-        <h1 className="font-display font-extrabold text-[15vw] leading-[0.85] tracking-tight md:text-[9rem]">
+        <h1 className="font-display font-extrabold text-[10vw] leading-[0.9] tracking-tight md:text-[7rem] lg:text-[9rem]">
           <span className="grad-text">ABDALLAH</span><br />
           <span className="text-neutral-600">AL HOMSI</span>
         </h1>
