@@ -1,3 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===========================================================================
+   DESIGN TOKENS — refined futuristic / AI
+   Palette is disciplined: cyan -> electric indigo on near-black,
+   amber used sparingly as the single warm accent.
+   =========================================================================== */
+:root {
+  --bg: #05060a;
+  --bg-soft: #0a0c14;
+  --ink: #f2f4f8;
+  --muted: #8a90a3;
+  --faint: #4b5167;
+
+  --cyan: #22d3ee;
+  --indigo: #818cf8;
+  --amber: #f59e0b;
+
+  --line: rgba(255, 255, 255, 0.08);
+  --glass: rgba(13, 16, 30, 0.55);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.35) transparent;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 99px;
+}
+
+body, #root { background: var(--bg); }
+
+/* Hide native cursor only on fine pointers (custom cursor takes over). */
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body { cursor: none; }
+  a, button, [data-cursor] { cursor: none; }
+}
+
+/* ---- Type roles ---- */
+.font-display { font-family: "Space Grotesk", system-ui, sans-serif; }
+.font-body { font-family: "Sora", system-ui, sans-serif; }
+.font-mono { font-family: "Space Mono", ui-monospace, monospace; }
+
+/* ---- Signature gradient text (cyan -> indigo, restrained) ---- */
+.grad-text {
+  background: linear-gradient(110deg, var(--cyan), var(--indigo) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.grad-amber {
+  background: linear-gradient(110deg, var(--amber), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- Glass + hairline border ---- */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+}
+
+/* neon hairline edge */
+.edge { position: relative; }
+.edge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(130deg, rgba(34,211,238,.45), rgba(129,140,248,.25), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ---- Atmosphere: fine grain + perspective grid ---- */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 70;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.gridbg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: linear-gradient(rgba(129,140,248,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 55% at 50% 0%, #000 25%, transparent 72%);
+}
+
+/* ---- Drifting orbs ---- */
+@keyframes drift {
+  0% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(8%,-6%) scale(1.18); }
+  66% { transform: translate(-6%,8%) scale(.9); }
+  100% { transform: translate(0,0) scale(1); }
+}
+@keyframes drift2 {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-10%,10%) scale(1.22); }
+  100% { transform: translate(0,0) scale(1); }
+}
+.orb-1 { animation: drift 22s ease-in-out infinite; }
+.orb-2 { animation: drift2 28s ease-in-out infinite; }
+
+/* ---- Marquee ---- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee { animation: marquee 28s linear infinite; }
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-1, .orb-2, .marquee { animation: none !important; }
+  * { scroll-behavior: auto !important; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
