@@ -148,6 +148,17 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
+                {job.doc && (
+                  <a
+                    href={job.doc.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="relative mt-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400/5 px-4 py-2 font-mono text-xs text-cyan-200 transition hover:border-cyan-400 hover:bg-cyan-400/10"
+                    data-cursor
+                  >
+                    📄 {job.doc.label} ↗
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
@@ -353,15 +364,34 @@ export function Certificates() {
                 </span>
               </div>
               <div className="mt-6 flex flex-wrap gap-2">
-                {tr.items.map((c) => (
-                  <span
-                    key={c.name}
-                    className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
-                  >
-                    {c.done && <span className="grad-amber font-bold">✓</span>}
-                    {c.name}
-                  </span>
-                ))}
+                {tr.items.map((c) => {
+                  const chip = (
+                    <>
+                      {c.done && <span className="grad-amber font-bold">✓</span>}
+                      {c.name}
+                      {c.file && <span className="text-cyan-300/70">↗</span>}
+                    </>
+                  );
+                  return c.file ? (
+                    <a
+                      key={c.name}
+                      href={c.file}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300 transition hover:border-cyan-400/50 hover:bg-cyan-400/5 hover:text-cyan-200"
+                      data-cursor
+                    >
+                      {chip}
+                    </a>
+                  ) : (
+                    <span
+                      key={c.name}
+                      className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+                    >
+                      {chip}
+                    </span>
+                  );
+                })}
               </div>
             </motion.div>
           );

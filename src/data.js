@@ -19,6 +19,7 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/abdallah-al-homsi-817a7834b/",
   photo: "/profile.jpg",
   photoPortrait: "/profile-portrait.jpg",
+  cv: "/Abdallah_Al_Homsi_CV.pdf",
   university: "Sabancı University",
   degree: "BSc Computer Science & Engineering · Minor in Business Analytics",
 };
@@ -99,26 +100,16 @@ export const EXPERIENCE = [
     ],
   },
   {
-    company: "Freelance — AI Content Creation",
+    company: "Freelance — AI Content & Software Development",
     location: "Remote",
-    period: "2025 – Present",
-    title: "AI Video & Social Content Creator",
-    tag: "Freelance · Content",
+    period: "Jun 2026 – Present",
+    title: "AI Video, Social Content & App/Web Developer",
+    tag: "Freelance · Content + Dev",
     points: [
       "Producing AI-generated video content, Instagram postcards, and carousels for business clients — currently running content for SIQ.Petra, a Jordanian company bringing local products to global markets.",
       "Full pipeline from concept to final export using Claude for scripting/direction and Higgsfield for AI video generation.",
-      "Deliverables are used directly in client marketing — not concepts, shipped assets.",
-    ],
-  },
-  {
-    company: "Freelance — Software Development",
-    location: "Remote",
-    period: "2025 – Present",
-    title: "Mobile Apps, Websites & Chatbots",
-    tag: "Freelance · Dev",
-    points: [
       "Building and shipping websites, mobile apps, and chatbots for small business clients alongside the content work.",
-      "Handles the full loop for clients who want both the product built and the marketing that sells it.",
+      "Handles the full loop for clients who want both the product built and the marketing that sells it — deliverables are shipped assets used directly in client marketing, not concepts.",
     ],
   },
   {
@@ -131,6 +122,10 @@ export const EXPERIENCE = [
       "Built custom SAC widgets using JavaScript, HTML, and CSS.",
       "Delivered two production-ready widgets independently and earned a recommendation letter.",
     ],
+    doc: {
+      label: "Recommendation Letter",
+      href: "/certificates/recommendation-techchef.pdf",
+    },
   },
 ];
 
@@ -168,29 +163,16 @@ export const CERT_TRACKS = [
     source: "Anthropic",
     hours: "30+ hrs",
     items: [
-      { name: "Building with the Claude API", done: false },
-      { name: "Claude with Amazon Bedrock", done: false },
-      { name: "Claude with Google Cloud Vertex AI", done: false },
-      { name: "Claude Code 101", done: false },
-      { name: "Claude Code in Action", done: false },
-      { name: "Introduction to MCP", done: false },
-      { name: "MCP: Advanced Topics", done: false },
-      { name: "Introduction to Agent Skills", done: false },
-      { name: "Introduction to Subagents", done: false },
-      { name: "Claude 101", done: false },
-      { name: "Introduction to Claude Cowork", done: false },
-      { name: "AI Capabilities & Limitations", done: false },
-    ],
-  },
-  {
-    track: "AI Fluency",
-    source: "Anthropic",
-    hours: "4+ hrs",
-    items: [
-      { name: "Framework & Foundations", done: false },
-      { name: "AI Fluency for Students", done: false },
-      { name: "AI Fluency for Small Businesses", done: false },
-      { name: "Teaching AI Fluency", done: false },
+      { name: "Building with the Claude API", done: true, file: "/certificates/claude-api.pdf" },
+      { name: "Claude with Amazon Bedrock", done: true, file: "/certificates/claude-bedrock.pdf" },
+      { name: "Claude Code 101", done: true, file: "/certificates/claude-code-101.pdf" },
+      { name: "Claude Code in Action", done: true, file: "/certificates/claude-code-in-action.pdf" },
+      { name: "Introduction to MCP", done: true, file: "/certificates/mcp-intro.pdf" },
+      { name: "MCP: Advanced Topics", done: true, file: "/certificates/mcp-advanced.pdf" },
+      { name: "Introduction to Agent Skills", done: true, file: "/certificates/agent-skills.pdf" },
+      { name: "Introduction to Subagents", done: true, file: "/certificates/subagents.pdf" },
+      { name: "Claude 101", done: true, file: "/certificates/claude-101.pdf" },
+      { name: "AI Capabilities & Limitations", done: true, file: "/certificates/ai-capabilities.pdf" },
     ],
   },
   {
@@ -198,8 +180,8 @@ export const CERT_TRACKS = [
     source: "Bootcamps",
     hours: "",
     items: [
-      { name: "Complete Web Development Bootcamp — Angela Yu", done: true },
-      { name: "JavaScript Mastery — JS Mastery", done: true },
+      { name: "Complete Web Development Bootcamp — Angela Yu", done: true, file: "/certificates/udemy-fullstack.pdf" },
+      { name: "JavaScript Mastery — JS Mastery", done: true, file: "/certificates/js-mastery.pdf" },
     ],
   },
 ];

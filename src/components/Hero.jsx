@@ -106,6 +106,19 @@ export default function Hero() {
                   ↓
                 </span>
               </Magnetic>
+              <a
+                href={PROFILE.cv}
+                target="_blank"
+                rel="noreferrer"
+                download
+                className="group flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-xs font-bold text-neutral-200 transition hover:border-cyan-400/60 hover:bg-cyan-400/5 hover:text-cyan-200"
+                data-cursor
+              >
+                Download CV
+                <span className="transition-transform group-hover:translate-y-0.5">
+                  ↓
+                </span>
+              </a>
             </div>
 
             <div className="flex gap-5 font-mono text-xs">
