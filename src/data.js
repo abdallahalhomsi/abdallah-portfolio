@@ -86,16 +86,81 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
+    company: "EastNets",
+    location: "Amman, Jordan",
+    period: "Jun – Sep 2026",
+    title: "Data Scientist Intern — AML Detection",
+    tag: "Full-time · AML / ML",
+    points: [
+      "Working end-to-end on an Anti-Money Laundering detection model, from raw transaction data to a deployable classifier — the full A-Z build cycle.",
+      "Owned data cleaning, preprocessing, and feature engineering in Python (Pandas, NumPy) on transactional datasets to surface suspicious-activity signals.",
+      "Built and evaluated classification models for flagging high-risk transactions, iterating on precision/recall trade-offs that matter in a compliance setting.",
+      "Working directly with a live financial compliance product, not a course project — model decisions have real regulatory weight.",
+    ],
+  },
+  {
+    company: "Freelance — AI Content Creation",
+    location: "Remote",
+    period: "2025 – Present",
+    title: "AI Video & Social Content Creator",
+    tag: "Freelance · Content",
+    points: [
+      "Producing AI-generated video content, Instagram postcards, and carousels for business clients — currently running content for SIQ.Petra, a Jordanian company bringing local products to global markets.",
+      "Full pipeline from concept to final export using Claude for scripting/direction and Higgsfield for AI video generation.",
+      "Deliverables are used directly in client marketing — not concepts, shipped assets.",
+    ],
+  },
+  {
+    company: "Freelance — Software Development",
+    location: "Remote",
+    period: "2025 – Present",
+    title: "Mobile Apps, Websites & Chatbots",
+    tag: "Freelance · Dev",
+    points: [
+      "Building and shipping websites, mobile apps, and chatbots for small business clients alongside the content work.",
+      "Handles the full loop for clients who want both the product built and the marketing that sells it.",
+    ],
+  },
+  {
     company: "TechChef — SAP Analytics Cloud Team",
     location: "Amman, Jordan",
     period: "Jun – Aug 2025",
     title: "Data Analyst & Custom Widget Developer Intern",
+    tag: "Internship",
     points: [
       "Built custom SAC widgets using JavaScript, HTML, and CSS.",
       "Delivered two production-ready widgets independently and earned a recommendation letter.",
     ],
   },
 ];
+
+// ============================================================================
+// FREELANCE / CLIENT WORK — proof-of-work showcase for the content + dev side.
+// ============================================================================
+export const CLIENT_WORK = {
+  client: "SIQ.Petra",
+  clientBlurb:
+    "A Jordanian company taking local Jordanian products to international markets. I run their AI-driven social content — video, postcards, and carousels — built to make the product feel premium enough for a global shelf.",
+  video: {
+    src: "/siq/siq-ai-video.mp4",
+    poster: "/siq/siq-video-poster.jpg",
+    label: "AI-generated product video · Claude + Higgsfield",
+  },
+  postcards: [
+    { src: "/siq/postcard-01.jpg", alt: "SIQ.Petra Instagram postcard 1" },
+    { src: "/siq/postcard-03.jpg", alt: "SIQ.Petra Instagram postcard 2" },
+    { src: "/siq/postcard-05.jpg", alt: "SIQ.Petra Instagram postcard 3" },
+    { src: "/siq/postcard-07.jpg", alt: "SIQ.Petra Instagram postcard 4" },
+    { src: "/siq/postcard-09.jpg", alt: "SIQ.Petra Instagram postcard 5" },
+    { src: "/siq/postcard-11.jpg", alt: "SIQ.Petra Instagram postcard 6" },
+  ],
+  offerings: [
+    "AI video ads & reels (Claude + Higgsfield)",
+    "Instagram postcards & carousels",
+    "Websites & mobile apps",
+    "Chatbots",
+  ],
+};
 
 export const CERT_TRACKS = [
   {
@@ -163,4 +228,11 @@ export const MARQUEE_WORDS = [
   "Cloud",
 ];
 
-export const NAV = ["Work", "Experience", "Skills", "Certificates", "Contact"];
+export const NAV = [
+  "Work",
+  "Experience",
+  "Freelance",
+  "Skills",
+  "Certificates",
+  "Contact",
+];

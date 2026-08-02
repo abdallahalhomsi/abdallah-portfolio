@@ -9,6 +9,7 @@ import {
   Marquee,
   Work,
   Experience,
+  Freelance,
   Skills,
   Certificates,
   Contact,
@@ -44,6 +45,7 @@ export default function Portfolio() {
         <Marquee />
         <Work />
         <Experience />
+        <Freelance />
         <Skills />
         <Certificates />
         <Contact />
