@@ -28,7 +28,7 @@ export const STATS = [
   { value: 2027, suffix: "", label: "Expected Graduation", isYear: true },
   { value: 4, suffix: "+", label: "Shipped Projects" },
   { value: 50, suffix: "%", label: "Merit Scholarship" },
-  { value: 16, suffix: "+", label: "Certifications" },
+  { value: 12, suffix: "+", label: "Certifications" },
 ];
 
 // Short, high-signal honors used as a row of "credibility chips".
@@ -172,7 +172,7 @@ export const CERT_TRACKS = [
       { name: "Introduction to Agent Skills", done: true, file: "/certificates/agent-skills.pdf" },
       { name: "Introduction to Subagents", done: true, file: "/certificates/subagents.pdf" },
       { name: "Claude 101", done: true, file: "/certificates/claude-101.pdf" },
-      { name: "AI Capabilities & Limitations", done: true, file: "/certificates/ai-capabilities.pdf" },
+      { name: "AI Fluency: Capabilities & Limitations", done: true, file: "/certificates/ai-capabilities.pdf" },
     ],
   },
   {
