@@ -103,7 +103,7 @@ export const EXPERIENCE = [
     // Kept short — the role title already carries the full scope.
     company: "Freelance",
     location: "Remote",
-    period: "2025 – Present",
+    period: "Jun 2026 – Present",
     title: "Software Developer / AI Services / AI Social Media Content Creation",
     tag: "Freelance · Dev + AI + Content",
     points: [
