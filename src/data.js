@@ -100,16 +100,17 @@ export const EXPERIENCE = [
     ],
   },
   {
-    company: "Freelance — AI Content & Software Development",
+    // Kept short — the role title already carries the full scope.
+    company: "Freelance",
     location: "Remote",
-    period: "Jun 2026 – Present",
-    title: "AI Video, Social Content & App/Web Developer",
-    tag: "Freelance · Content + Dev",
+    period: "2025 – Present",
+    title: "Software Developer / AI Services / AI Social Media Content Creation",
+    tag: "Freelance · Dev + AI + Content",
     points: [
-      "Producing AI-generated video content, Instagram postcards, and carousels for business clients — currently running content for SIQ.Petra, a Jordanian company bringing local products to global markets.",
-      "Full pipeline from concept to final export using Claude for scripting/direction and Higgsfield for AI video generation.",
-      "Building and shipping websites, mobile apps, and chatbots for small business clients alongside the content work.",
-      "Handles the full loop for clients who want both the product built and the marketing that sells it — deliverables are shipped assets used directly in client marketing, not concepts.",
+      "Built and delivered websites, mobile apps, backend systems, APIs, and AI-powered solutions for many clients across a range of business needs.",
+      "Provide AI services including workflow automation, chatbot development, AI integrations, and custom software solutions tailored to each client's requirements.",
+      "Create AI-generated videos, social media creatives, and marketing assets for many clients.",
+      "Work both sides of the loop — the software that gets built and the content that markets it.",
     ],
   },
   {
@@ -134,8 +135,18 @@ export const EXPERIENCE = [
 // ============================================================================
 export const CLIENT_WORK = {
   client: "SIQ.Petra",
+  // Reads as an appositive right after the client name, so it starts lowercase.
   clientBlurb:
-    "A Jordanian company taking local Jordanian products to international markets. I run their AI-driven social content — video, postcards, and carousels — built to make the product feel premium enough for a global shelf.",
+    "a Jordanian company taking local Jordanian products to international markets. I run their AI-driven social content — video, postcards, and carousels — built to make the product feel premium enough for a global shelf.",
+  // Framing for the showcase: this is a sample, not the whole picture.
+  intro:
+    "I freelance across two tracks — building software (websites, mobile apps, backend systems, APIs, and AI integrations) and producing AI-generated social content — for many clients.",
+  // Rendered as: {selectedLead} <client> — <clientBlurb> {selectedTail}
+  selectedLead: "Below is a selection of AI content work from one client,",
+  selectedTail:
+    "It's a sample of the content-creation side, not the full body of work.",
+  privacyNote:
+    "A large share of my freelance software work — client web apps, backend systems, APIs, and AI integrations — can't be shown publicly due to client confidentiality and security policies.",
   video: {
     src: "/siq/siq-ai-video.mp4",
     poster: "/siq/siq-video-poster.jpg",

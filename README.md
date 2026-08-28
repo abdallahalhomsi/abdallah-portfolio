@@ -64,6 +64,7 @@ Everything lives in **`src/data.js`**:
 - `STATS` / `HONORS` — hero numbers and credibility chips
 - `PROJECTS` — push a new object to add a card (`accent` / `accent2` set its color)
 - `EXPERIENCE` — work history
+- `CLIENT_WORK` — freelance showcase (client blurb, framing notes, video, postcards, offerings)
 - `CERT_TRACKS` — certificates (set `done: true` on an item for a ✓ badge)
 - `SKILLS` — grouped skill tags
 

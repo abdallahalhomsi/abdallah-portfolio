@@ -125,7 +125,9 @@ export function Experience() {
                   <h3 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
                     {job.title}
                   </h3>
-                  <span className="font-mono text-xs text-neutral-500">{job.period}</span>
+                  <span className="shrink-0 font-mono text-xs text-neutral-500">
+                    {job.period}
+                  </span>
                 </div>
                 <div className="relative mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-sm text-cyan-300/80">
                   <span>
@@ -170,7 +172,17 @@ export function Experience() {
 
 /* -------------------------------- Freelance -------------------------------- */
 export function Freelance() {
-  const { client, clientBlurb, video, postcards, offerings } = CLIENT_WORK;
+  const {
+    client,
+    clientBlurb,
+    intro,
+    selectedLead,
+    selectedTail,
+    privacyNote,
+    video,
+    postcards,
+    offerings,
+  } = CLIENT_WORK;
   return (
     <section
       id="freelance"
@@ -184,10 +196,18 @@ export function Freelance() {
         viewport={viewport}
         className="mt-6 max-w-2xl font-body text-neutral-400"
       >
-        Outside of AML work, I run AI-driven content and dev for business
-        clients — currently shipping for{" "}
-        <span className="grad-text font-semibold">{client}</span>,{" "}
-        {clientBlurb.replace(client, "").replace(/^,?\s*/, "")}
+        {intro}
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={viewport}
+        className="mt-4 max-w-2xl font-body text-neutral-400"
+      >
+        {selectedLead}{" "}
+        <span className="grad-text font-semibold">{client}</span> —{" "}
+        {clientBlurb} {selectedTail}
       </motion.p>
 
       <motion.div
@@ -269,6 +289,22 @@ export function Freelance() {
           ))}
         </motion.div>
       </div>
+
+      {/* Why the dev side isn't on display. */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={viewport}
+        className="mt-8 flex max-w-3xl items-start gap-3 rounded-2xl glass edge p-5"
+      >
+        <span
+          className="mt-0.5 shrink-0 font-mono text-sm text-cyan-300/80"
+          aria-hidden
+        >
+          🔒
+        </span>
+        <p className="font-body text-sm text-neutral-400">{privacyNote}</p>
+      </motion.div>
 
       <motion.p
         initial={{ opacity: 0 }}
