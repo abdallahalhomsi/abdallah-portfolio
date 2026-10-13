@@ -1,0 +1,13 @@
+Portfolio updates - October 2026
+
+- Replaced the public CV with the newly attached CV.
+- Added PURE Undergraduate Researcher (Sep 2026 - Jan 2027) to Experience.
+- Added CS201 Learning Assistant (Sep 2026 - Jan 2027) to Experience.
+- Added DialectGuard Arabic NLP / trustworthy LLM research as the first Selected Work item.
+- Added Multimodal AI for Early Cybersickness Prediction graduation research project.
+- Updated hero/profile wording to reflect AI/ML research alongside software engineering.
+- Updated project/research count and credibility chips.
+- Added Arabic NLP, LLM evaluation, and multimodal AI to the toolkit.
+- Updated page metadata for research-focused positioning.
+
+Design/layout and existing portfolio sections were otherwise preserved.

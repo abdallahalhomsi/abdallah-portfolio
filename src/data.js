@@ -8,11 +8,11 @@ export const PROFILE = {
   name: "Abdallah Al Homsi",
   first: "Abdallah",
   last: "Al Homsi",
-  role: "Software Engineer · ML",
+  role: "Software Engineer · AI/ML Research",
   tagline:
-    "Senior CS & Engineering student building full-stack products, mobile apps, and applied ML. Minor in Business Analytics.",
+    "Senior CS & Engineering student building full-stack products, mobile apps, applied ML, and AI research. Minor in Business Analytics.",
   // One sharp line for the hero — punchier than the tagline.
-  hook: "I build full-stack products, mobile apps, and applied ML.",
+  hook: "I build full-stack products, applied ML, and research trustworthy AI systems.",
   location: "Istanbul, TR · Amman, JO",
   email: "homsiabdullah4@gmail.com",
   github: "https://github.com/abdallahalhomsi",
@@ -26,7 +26,7 @@ export const PROFILE = {
 
 export const STATS = [
   { value: 2027, suffix: "", label: "Expected Graduation", isYear: true },
-  { value: 4, suffix: "+", label: "Shipped Projects" },
+  { value: 6, suffix: "+", label: "Projects & Research" },
   { value: 50, suffix: "%", label: "Merit Scholarship" },
   { value: 12, suffix: "+", label: "Certifications" },
 ];
@@ -35,10 +35,34 @@ export const STATS = [
 export const HONORS = [
   "Dean's List · High Honors",
   "50% Merit Scholarship",
+  "Undergraduate Researcher · PURE",
+  "Learning Assistant · CS201",
   "Recommendation Letter — TechChef",
 ];
 
 export const PROJECTS = [
+  {
+    name: "DialectGuard",
+    type: "Arabic NLP & Trustworthy LLM Research",
+    period: "Oct 2026 – Jan 2027",
+    role: "Independent Research · In Progress",
+    blurb:
+      "Co-developing a dialect-aware framework to evaluate and mitigate factual reliability failures in Arabic LLMs using normalization, retrieval, and verification.",
+    stack: ["Arabic NLP", "LLMs", "RAG", "Python", "Evaluation"],
+    accent: "#22d3ee",
+    accent2: "#818cf8",
+  },
+  {
+    name: "Multimodal AI for Early Cybersickness Prediction",
+    type: "Graduation Research Project",
+    period: "Sep 2026 – Present",
+    role: "ML Research",
+    blurb:
+      "Developing machine-learning methods using multimodal VR data, including network traffic and user movement, to predict cybersickness early and improve AR/VR user experience.",
+    stack: ["Machine Learning", "Multimodal Data", "Python", "AR/VR", "Research"],
+    accent: "#818cf8",
+    accent2: "#34d399",
+  },
   {
     name: "SneakerNest",
     type: "Full-Stack E-Commerce Platform",
@@ -87,16 +111,36 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
+    company: "Sabancı University — PURE Program",
+    location: "Istanbul, Turkey",
+    period: "Sep 2026 – Jan 2027",
+    title: "Undergraduate Researcher",
+    tag: "Research · AI",
+    points: [
+      "Conduct undergraduate research on ‘Advancements of AI in Surveys,’ including literature review, methodology development, analysis, and academic reporting.",
+    ],
+  },
+  {
+    company: "Sabancı University — CS201 Programming Fundamentals",
+    location: "Istanbul, Turkey",
+    period: "Sep 2026 – Jan 2027",
+    title: "Learning Assistant (LA)",
+    tag: "Teaching · Programming",
+    points: [
+      "Support CS201 students with programming fundamentals, exercises, problem solving, and debugging during course activities.",
+    ],
+  },
+  {
     company: "EastNets",
     location: "Amman, Jordan",
     period: "Jun – Sep 2026",
     title: "Data Scientist Intern — AML Detection",
     tag: "Full-time · AML / ML",
     points: [
-      "Working end-to-end on an Anti-Money Laundering detection model, from raw transaction data to a deployable classifier — the full A-Z build cycle.",
+      "Worked end-to-end on an Anti-Money Laundering detection model, from raw transaction data to a deployable classifier.",
       "Owned data cleaning, preprocessing, and feature engineering in Python (Pandas, NumPy) on transactional datasets to surface suspicious-activity signals.",
       "Built and evaluated classification models for flagging high-risk transactions, iterating on precision/recall trade-offs that matter in a compliance setting.",
-      "Working directly with a live financial compliance product, not a course project — model decisions have real regulatory weight.",
+      "Worked directly with a live financial compliance product, applying ML in a real financial-compliance setting.",
     ],
   },
   {
@@ -107,9 +151,9 @@ export const EXPERIENCE = [
     title: "Software Developer / AI Services / AI Social Media Content Creation",
     tag: "Freelance · Dev + AI + Content",
     points: [
-      "Built and delivered websites, mobile apps, backend systems, APIs, and AI-powered solutions for many clients across a range of business needs.",
+      "Built and delivered websites, mobile apps, backend systems, APIs, and AI-powered solutions for several freelance clients across different business needs.",
       "Provide AI services including workflow automation, chatbot development, AI integrations, and custom software solutions tailored to each client's requirements.",
-      "Create AI-generated videos, social media creatives, and marketing assets for many clients.",
+      "Create AI-generated videos, social media creatives, and marketing assets for several clients.",
       "Work both sides of the loop — the software that gets built and the content that markets it.",
     ],
   },
@@ -202,6 +246,10 @@ export const SKILLS = {
   "Frontend & Mobile": ["React.js", "HTML", "CSS", "Flutter", "Figma"],
   "Backend & Data": ["Node.js", "Express.js", "MySQL", "Firebase", "Docker"],
   "ML & Analytics": [
+    "Machine Learning",
+    "Arabic NLP",
+    "LLM Evaluation",
+    "Multimodal AI",
     "PyTorch",
     "scikit-learn",
     "YOLO",
@@ -217,8 +265,8 @@ export const MARQUEE_WORDS = [
   "Mobile",
   "Machine Learning",
   "Data Science",
-  "AI Engineering",
-  "Cloud",
+  "Arabic NLP",
+  "Trustworthy AI",
 ];
 
 export const NAV = [
