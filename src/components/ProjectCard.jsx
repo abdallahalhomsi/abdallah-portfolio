@@ -85,6 +85,23 @@ export default function ProjectCard({ project, index }) {
           {project.blurb}
         </p>
 
+        {project.conference && (
+          <a
+            href={project.conference.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative mt-4 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 font-mono text-xs transition-opacity hover:opacity-75"
+            style={{
+              borderColor: `${project.accent}60`,
+              color: project.accent,
+              background: `${project.accent}12`,
+            }}
+            data-cursor
+          >
+            {project.conference.label} ↗
+          </a>
+        )}
+
         <div className="mt-5 flex flex-wrap gap-2">
           {project.stack.map((t) => (
             <span

@@ -26,7 +26,7 @@ export const PROFILE = {
 
 export const STATS = [
   { value: 2027, suffix: "", label: "Expected Graduation", isYear: true },
-  { value: 6, suffix: "+", label: "Projects & Research" },
+  { value: 8, suffix: "+", label: "Projects & Research" },
   { value: 50, suffix: "%", label: "Merit Scholarship" },
   { value: 12, suffix: "+", label: "Certifications" },
 ];
@@ -44,11 +44,11 @@ export const PROJECTS = [
   {
     name: "DialectGuard",
     type: "Arabic NLP & Trustworthy LLM Research",
-    period: "Oct 2026 – Jan 2027",
-    role: "Independent Research · In Progress",
+    period: "Oct – Nov 2026",
+    role: "Independent Research · Manuscript Completed",
     blurb:
-      "Co-developing a dialect-aware framework to evaluate and mitigate factual reliability failures in Arabic LLMs using normalization, retrieval, and verification.",
-    stack: ["Arabic NLP", "LLMs", "RAG", "Python", "Evaluation"],
+      "Co-developed an Arabic LLM factual-reliability research framework across Modern Standard, Jordanian, Egyptian, and Saudi Arabic. Evaluated multi-model disagreement, dialect normalization, and retrieval-augmented generation across 4,020 experimental runs, documenting findings and limitations in a completed, unpublished manuscript.",
+    stack: ["Arabic NLP", "LLMs", "RAG", "Python", "Model Evaluation"],
     accent: "#22d3ee",
     accent2: "#818cf8",
   },
@@ -56,12 +56,38 @@ export const PROJECTS = [
     name: "Multimodal AI for Early Cybersickness Prediction",
     type: "Graduation Research Project",
     period: "Sep 2026 – Present",
-    role: "ML Research",
+    role: "ML Research · Conference Submission Planned",
     blurb:
-      "Developing machine-learning methods using multimodal VR data, including network traffic and user movement, to predict cybersickness early and improve AR/VR user experience.",
-    stack: ["Machine Learning", "Multimodal Data", "Python", "AR/VR", "Research"],
+      "Investigating early cybersickness prediction using multimodal AR/VR data, including network traffic and user movement, alongside risk-aware network scheduling. The research is being developed toward a possible paper submission to the IEEE SİU 2027 Signal Processing and Communications Applications Conference; it has not yet been submitted or accepted.",
+    stack: ["Machine Learning", "Multimodal Data", "Python", "AR/VR", "Network Scheduling"],
+    conference: {
+      label: "SİU 2027 — Call for Papers",
+      url: "https://siu2027.medipol.edu.tr/yazarlar#cfp",
+    },
     accent: "#818cf8",
     accent2: "#34d399",
+  },
+  {
+    name: "FactTrace",
+    type: "Mobile Claim-Verification Application",
+    period: "Sep 2026 – Jan 2027",
+    role: "Mobile Development · Human-Centered Verification",
+    blurb:
+      "Developing a camera-based mobile application that extracts claims with OCR, retrieves matching evidence and provenance from a curated database, and lets users make their own verification decisions. Evaluating the workflow against browser search using accuracy, time, source use, and sharing intention.",
+    stack: ["React Native", "TypeScript", "Expo Camera", "OCR", "Node.js", "MySQL"],
+    accent: "#f59e0b",
+    accent2: "#22d3ee",
+  },
+  {
+    name: "DiCo-NLI",
+    type: "Directional-Consistent Natural Language Inference",
+    period: "Sep 2026 – Jan 2027",
+    role: "NLP · Model Evaluation",
+    blurb:
+      "Developing and evaluating fine-grained natural language inference methods that account for the direction of sentence-pair relationships. Contributing to dataset preparation, text preprocessing, machine-learning baselines, and exploration of transformer-based approaches.",
+    stack: ["NLP", "Python", "scikit-learn", "TF-IDF", "Transformers"],
+    accent: "#c084fc",
+    accent2: "#818cf8",
   },
   {
     name: "SneakerNest",
@@ -242,22 +268,31 @@ export const CERT_TRACKS = [
 ];
 
 export const SKILLS = {
-  Languages: ["Python", "C++", "JavaScript", "SQL", "Java", "Dart", "Swift"],
-  "Frontend & Mobile": ["React.js", "HTML", "CSS", "Flutter", "Figma"],
-  "Backend & Data": ["Node.js", "Express.js", "MySQL", "Firebase", "Docker"],
+  Languages: ["Python", "C++", "JavaScript", "TypeScript", "SQL", "Java", "Dart", "Swift"],
+  "Frontend & Mobile": ["React.js", "React Native", "Expo", "Expo Camera", "HTML", "CSS", "Flutter", "Figma"],
+  "Backend & Data": ["Node.js", "Express.js", "REST APIs", "MySQL", "Firebase", "Docker"],
   "ML & Analytics": [
     "Machine Learning",
+    "Natural Language Processing",
     "Arabic NLP",
+    "Large Language Models",
+    "RAG",
     "LLM Evaluation",
     "Multimodal AI",
+    "Computer Vision",
+    "OCR",
     "PyTorch",
     "scikit-learn",
+    "TF-IDF",
     "YOLO",
+    "CoreML",
     "Pandas",
     "NumPy",
+    "Matplotlib",
+    "Seaborn",
     "SAP Analytics Cloud",
   ],
-  Tooling: ["Git / GitHub", "JIRA", "Docker Compose"],
+  Tooling: ["Git / GitHub", "JIRA", "Docker Compose", "Xcode", "Google Cloud Vision"],
 };
 
 export const MARQUEE_WORDS = [
